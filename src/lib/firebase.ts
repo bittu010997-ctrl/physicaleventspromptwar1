@@ -13,13 +13,13 @@ const firebaseConfig = {
   measurementId: "G-B6PHYW7G21"
 };
 
-let app: any, db: any, auth: any, analytics: any;
+let app: any, db: any, auth: any;
 try {
   app = initializeApp(firebaseConfig);
   db = getFirestore(app);
   auth = getAuth(app);
   if (typeof window !== "undefined") {
-    analytics = getAnalytics(app);
+    getAnalytics(app);
   }
 } catch (error) {
   console.warn("Firebase initialization failed. Using mock DB.", error);

@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { GoogleMap, useJsApiLoader, DirectionsRenderer } from '@react-google-maps/api';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Navigation, Clock, Bell, Map as MapIcon, ArrowRight, ShieldAlert, Footprints } from 'lucide-react';
+
+import { Navigation, Clock, Map as MapIcon, ArrowRight, Footprints } from 'lucide-react';
 import { ticketService, STADIUM_GATES } from '../../lib/ticketService';
 import type { TicketProfile } from '../../lib/ticketService';
-import GateComparison from './GateComparison';
+
 
 const mapContainerStyle = {
   width: '100%',
@@ -41,7 +41,7 @@ export const DynamicNavigationCard: React.FC<{ uid: string, goal?: RouteGoal }> 
   const [directions, setDirections] = useState<google.maps.DirectionsResult | null>(null);
   const [walkingDistanceText, setWalkingDistanceText] = useState('Calculating...');
   
-  const [alert, setAlert] = useState<{title: string, message: string} | null>(null);
+
 
   useEffect(() => {
     const init = async () => {
