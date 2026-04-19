@@ -158,7 +158,7 @@ const WayfindingPage: React.FC = () => {
     <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       {/* Chat Area */}
       <div style={{ flex: 1, overflowY: 'auto', padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-        {messages.map((msg, index) => (
+        {messages.map((msg) => (
           <motion.div 
             key={msg.id}
             initial={{ opacity: 0, y: 10 }}

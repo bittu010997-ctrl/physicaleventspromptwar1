@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { X, Clock, Navigation } from 'lucide-react';
+import { X, Clock } from 'lucide-react';
 import { STADIUM_GATES } from '../../lib/ticketService';
 
 type GateComparisonProps = {

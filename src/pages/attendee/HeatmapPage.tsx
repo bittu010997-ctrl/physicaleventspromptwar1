@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Clock, ArrowRight, UserCircle } from 'lucide-react';
+import { MapPin, Clock, UserCircle } from 'lucide-react';
 import { DynamicNavigationCard } from '../../components/attendee/DynamicNavigationCard';
 
 const HeatmapPage: React.FC = () => {

@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, doc, getDoc, setDoc, updateDoc, arrayUnion } from 'firebase/firestore';
+import { getFirestore, doc, getDoc, setDoc, arrayUnion } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 import { getAnalytics } from "firebase/analytics";
 
@@ -13,7 +13,7 @@ const firebaseConfig = {
   measurementId: "G-B6PHYW7G21"
 };
 
-let app, db, auth, analytics;
+let app: any, db: any, auth: any, analytics: any;
 try {
   app = initializeApp(firebaseConfig);
   db = getFirestore(app);
