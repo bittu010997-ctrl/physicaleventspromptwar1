@@ -30,7 +30,7 @@ export type RouteGoal = {
 export const DynamicNavigationCard: React.FC<{ uid: string, goal?: RouteGoal }> = ({ uid, goal }) => {
   const { isLoaded, loadError } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: import.meta.env.VITE_MAPS_API_KEY || "dummy_key_to_enforce_no_crash",
+    googleMapsApiKey: import.meta.env.VITE_MAPS_API_KEY || "AIzaSyAOlDN3yMJTPhE8q-rjdL2qsTdKJIJZNlg",
   });
 
   const [ticket, setTicket] = useState<TicketProfile | null>(null);
